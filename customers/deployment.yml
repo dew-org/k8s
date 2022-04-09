@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: deworg-customers
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: deworg-customers
+spec:
+  selector:
+    app: deworg-customers
+  ports:
+    - port: 8080
+      targetPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deworg-customers
+  annotations:
+    'consul.hashicorp.com/connect-inject': 'true'
+spec:
+  selector:
+    matchLabels:
+      app: deworg-customers
+  template:
+    metadata:
+      labels:
+        app: deworg-customers
+    spec:
+      containers:
+        - name: deworg-customers
+          image: deworg/customers
+          env:
+            - name: CONSUL_HOST
+              value: "consul-server.consul"
+            - name: CONSUL_PORT
+              value: "8500"
+            - name: MONGO_HOST
+              value: deworg-db
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080

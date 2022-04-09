@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: deworg-gateway-service
+spec:
+  selector:
+    app: deworg-gateway
+    type: NodePort
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 8080
+      protocol: TCP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deworg-gateway
+  annotations:
+    "consul.hashicorp.com/connect-inject": "true"
+spec:
+  selector:
+    matchLabels:
+      app: deworg-gateway
+  template:
+    metadata:
+      labels:
+        app: deworg-gateway
+    spec:
+      containers:
+        - name: deworg-gateway
+          image: deworg/gateway
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
+          command:
+            - "/usr/bin/krakend"
+          args: [ "run", "-d", "-c", "/etc/krakend/krakend.json", "-p", "8080" ]
+          env:
+            - name: KRAKEND_PORT
+              value: "8080"
