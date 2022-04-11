@@ -4,7 +4,7 @@ metadata:
   name: deworg-data-claim
 spec:
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
-      storage: 500Mi
+      storage: 1Gi
