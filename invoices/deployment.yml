@@ -30,7 +30,7 @@ spec:
         app: deworg-invoices
     spec:
       containers:
-        - name: deworg-customers
+        - name: deworg-invoices
           image: deworg/invoices
           env:
             - name: CONSUL_HOST
