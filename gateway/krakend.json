@@ -3,18 +3,16 @@
   "version": 3,
   "timeout": "3000ms",
   "cache_ttl": "300s",
-  "output_encoding": "json",
+  "output_encoding": "no-op",
   "name": "dew-org gateway",
   "endpoints": [
     {
       "endpoint": "/customers",
-      "output_encoding": "no-op",
       "method": "POST",
       "backend": [
         {
           "url_pattern": "/customers",
           "sd": "dns",
-          "encoding": "no-op",
           "host": [
             "customers.service.consul"
           ],
@@ -24,12 +22,10 @@
     },
     {
       "endpoint": "/customers/{id}",
-      "output_encoding": "no-op",
       "method": "GET",
       "backend": [
         {
           "url_pattern": "/customers/{id}",
-          "encoding": "no-op",
           "sd": "dns",
           "host": [
             "customers.service.consul"
@@ -68,13 +64,11 @@
     },
     {
       "endpoint": "/products",
-      "output_encoding": "no-op",
       "method": "POST",
       "backend": [
         {
           "url_pattern": "/products",
           "sd": "dns",
-          "encoding": "no-op",
           "host": [
             "products.service.consul"
           ],
@@ -84,13 +78,11 @@
     },
     {
       "endpoint": "/products",
-      "output_encoding": "no-op",
       "method": "GET",
       "backend": [
         {
           "url_pattern": "/products",
           "sd": "dns",
-          "encoding": "no-op",
           "host": [
             "products.service.consul"
           ],
@@ -100,12 +92,10 @@
     },
     {
       "endpoint": "/products/{code}",
-      "output_encoding": "no-op",
       "method": "GET",
       "backend": [
         {
           "url_pattern": "/products/{code}",
-          "encoding": "no-op",
           "sd": "dns",
           "host": [
             "products.service.consul"
@@ -116,13 +106,11 @@
     },
     {
       "endpoint": "/invoices",
-      "output_encoding": "no-op",
       "method": "POST",
       "backend": [
         {
           "url_pattern": "/invoices",
           "sd": "dns",
-          "encoding": "no-op",
           "host": [
             "invoices.service.consul"
           ],
