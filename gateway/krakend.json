@@ -1,106 +1,134 @@
 {
-    "$schema": "https://www.krakend.io/schema/v3.json",
-    "version": 3,
-    "timeout": "3000ms",
-    "cache_ttl": "300s",
-    "output_encoding": "json",
-    "name": "dew-org gateway",
-    "endpoints": [
+  "$schema": "https://www.krakend.io/schema/v3.json",
+  "version": 3,
+  "timeout": "3000ms",
+  "cache_ttl": "300s",
+  "output_encoding": "json",
+  "name": "dew-org gateway",
+  "endpoints": [
+    {
+      "endpoint": "/customers",
+      "output_encoding": "no-op",
+      "method": "POST",
+      "backend": [
         {
-            "endpoint": "/customers",
-            "output_encoding": "no-op",
-            "method": "POST",
-            "backend": [
-                {
-                    "url_pattern": "/customers",
-                    "sd": "dns",
-                    "encoding": "no-op",
-                    "host": [
-                        "customers.service.consul"
-                    ],
-                    "disable_host_sanitize": true
-                }
-            ]
-        },
-        {
-            "endpoint": "/customers/{id}",
-            "output_encoding": "no-op",
-            "method": "GET",
-            "backend": [
-                {
-                    "url_pattern": "/customers/{id}",
-                    "encoding": "no-op",
-                    "sd": "dns",
-                    "host": [
-                        "customers.service.consul"
-                    ],
-                    "disable_host_sanitize": true
-                }
-            ]
-        },
-        {
-            "endpoint": "/products",
-            "output_encoding": "no-op",
-            "method": "POST",
-            "backend": [
-                {
-                    "url_pattern": "/products",
-                    "sd": "dns",
-                    "encoding": "no-op",
-                    "host": [
-                        "products.service.consul"
-                    ],
-                    "disable_host_sanitize": true
-                }
-            ]
-        },
-        {
-            "endpoint": "/products",
-            "output_encoding": "no-op",
-            "method": "GET",
-            "backend": [
-                {
-                    "url_pattern": "/products",
-                    "sd": "dns",
-                    "encoding": "no-op",
-                    "host": [
-                        "products.service.consul"
-                    ],
-                    "disable_host_sanitize": true
-                }
-            ]
-        },
-        {
-            "endpoint": "/products/{code}",
-            "output_encoding": "no-op",
-            "method": "GET",
-            "backend": [
-                {
-                    "url_pattern": "/products/{code}",
-                    "encoding": "no-op",
-                    "sd": "dns",
-                    "host": [
-                        "products.service.consul"
-                    ],
-                    "disable_host_sanitize": true
-                }
-            ]
-        },
-        {
-            "endpoint": "/invoices",
-            "output_encoding": "no-op",
-            "method": "POST",
-            "backend": [
-                {
-                    "url_pattern": "/invoices",
-                    "sd": "dns",
-                    "encoding": "no-op",
-                    "host": [
-                        "invoices.service.consul"
-                    ],
-                    "disable_host_sanitize": true
-                }
-            ]
+          "url_pattern": "/customers",
+          "sd": "dns",
+          "encoding": "no-op",
+          "host": [
+            "customers.service.consul"
+          ],
+          "disable_host_sanitize": true
         }
-    ]
+      ]
+    },
+    {
+      "endpoint": "/customers/{id}",
+      "output_encoding": "no-op",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/customers/{id}",
+          "encoding": "no-op",
+          "sd": "dns",
+          "host": [
+            "customers.service.consul"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/catalogue",
+      "method": "POST",
+      "backend": [
+        {
+          "url_pattern": "/catalogue",
+          "sd": "dns",
+          "host": [
+            "catalogue.service.consul"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/catalogue/{codeOrSku}",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/catalogue/{codeOrSku}",
+          "sd": "dns",
+          "host": [
+            "catalogue.service.consul"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/products",
+      "output_encoding": "no-op",
+      "method": "POST",
+      "backend": [
+        {
+          "url_pattern": "/products",
+          "sd": "dns",
+          "encoding": "no-op",
+          "host": [
+            "products.service.consul"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/products",
+      "output_encoding": "no-op",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/products",
+          "sd": "dns",
+          "encoding": "no-op",
+          "host": [
+            "products.service.consul"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/products/{code}",
+      "output_encoding": "no-op",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/products/{code}",
+          "encoding": "no-op",
+          "sd": "dns",
+          "host": [
+            "products.service.consul"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/invoices",
+      "output_encoding": "no-op",
+      "method": "POST",
+      "backend": [
+        {
+          "url_pattern": "/invoices",
+          "sd": "dns",
+          "encoding": "no-op",
+          "host": [
+            "invoices.service.consul"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
+    }
+  ]
 }
