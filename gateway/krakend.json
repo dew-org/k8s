@@ -63,6 +63,34 @@
       ]
     },
     {
+      "endpoint": "/inventory",
+      "method": "POST",
+      "backend": [
+        {
+          "url_pattern": "/inventory",
+          "sd": "dns",
+          "host": [
+            "inventory.service.consul"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/inventory/{codeOrSku}",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/inventory/{codeOrSku}",
+          "sd": "dns",
+          "host": [
+            "inventory.service.consul"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
       "endpoint": "/products",
       "method": "POST",
       "backend": [
