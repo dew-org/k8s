@@ -49,6 +49,20 @@
       ]
     },
     {
+      "endpoint": "/catalogue",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/catalogue",
+          "sd": "dns",
+          "host": [
+            "catalogue.service.consul"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
       "endpoint": "/catalogue/{codeOrSku}",
       "method": "GET",
       "backend": [
