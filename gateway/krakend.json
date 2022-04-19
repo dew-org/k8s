@@ -13,6 +13,7 @@
         {
           "url_pattern": "/customers",
           "sd": "dns",
+          "encoding": "no-op",
           "host": [
             "customers.service.consul"
           ],
@@ -27,6 +28,7 @@
         {
           "url_pattern": "/customers/{id}",
           "sd": "dns",
+          "encoding": "no-op",
           "host": [
             "customers.service.consul"
           ],
@@ -41,6 +43,7 @@
         {
           "url_pattern": "/catalogue",
           "sd": "dns",
+          "encoding": "no-op",
           "host": [
             "catalogue.service.consul"
           ],
@@ -55,6 +58,7 @@
         {
           "url_pattern": "/catalogue",
           "sd": "dns",
+          "encoding": "no-op",
           "host": [
             "catalogue.service.consul"
           ],
@@ -69,6 +73,7 @@
         {
           "url_pattern": "/catalogue/{codeOrSku}",
           "sd": "dns",
+          "encoding": "no-op",
           "host": [
             "catalogue.service.consul"
           ],
@@ -83,6 +88,7 @@
         {
           "url_pattern": "/inventory",
           "sd": "dns",
+          "encoding": "no-op",
           "host": [
             "inventory.service.consul"
           ],
@@ -97,6 +103,7 @@
         {
           "url_pattern": "/inventory/{codeOrSku}",
           "sd": "dns",
+          "encoding": "no-op",
           "host": [
             "inventory.service.consul"
           ],
@@ -153,6 +160,7 @@
         {
           "url_pattern": "/invoices",
           "sd": "dns",
+          "encoding": "no-op",
           "host": [
             "invoices.service.consul"
           ],
