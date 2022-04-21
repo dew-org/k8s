@@ -112,48 +112,6 @@
       ]
     },
     {
-      "endpoint": "/products",
-      "method": "POST",
-      "backend": [
-        {
-          "url_pattern": "/products",
-          "sd": "dns",
-          "host": [
-            "products.service.consul"
-          ],
-          "disable_host_sanitize": true
-        }
-      ]
-    },
-    {
-      "endpoint": "/products",
-      "method": "GET",
-      "backend": [
-        {
-          "url_pattern": "/products",
-          "sd": "dns",
-          "host": [
-            "products.service.consul"
-          ],
-          "disable_host_sanitize": true
-        }
-      ]
-    },
-    {
-      "endpoint": "/products/{code}",
-      "method": "GET",
-      "backend": [
-        {
-          "url_pattern": "/products/{code}",
-          "sd": "dns",
-          "host": [
-            "products.service.consul"
-          ],
-          "disable_host_sanitize": true
-        }
-      ]
-    },
-    {
       "endpoint": "/invoices",
       "method": "POST",
       "backend": [
