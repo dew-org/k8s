@@ -37,6 +37,8 @@ spec:
               value: "consul-server.consul"
             - name: MONGO_HOST
               value: deworg-db
+            - name: KAFKA_HOST
+              value: kafka.kafka
           resources:
             limits:
               memory: "256Mi"
