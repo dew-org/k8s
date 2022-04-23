@@ -37,6 +37,16 @@ spec:
               value: "consul-server.consul"
             - name: MONGO_HOST
               value: deworg-db
+            - name: AUTH0_AUDIENCE
+              valueFrom:
+                configMapKeyRef:
+                  name: auth0
+                  key: audience
+            - name: AUTH0_DOMAIN
+              valueFrom:
+                configMapKeyRef:
+                  name: auth0
+                  key: domain
           resources:
             limits:
               memory: "256Mi"

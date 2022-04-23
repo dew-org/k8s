@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: auth0
+data:
+  domain: dev-9rrsz2ql.us.auth0.com
+  audience: https://api.deworg.com
