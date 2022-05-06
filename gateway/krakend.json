@@ -125,6 +125,36 @@
           "disable_host_sanitize": true
         }
       ]
+    },
+    {
+      "endpoint": "/invoices/{id}",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/invoices/{id}",
+          "sd": "dns",
+          "encoding": "no-op",
+          "host": [
+            "invoices.service.consul"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/invoices",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/invoices",
+          "sd": "dns",
+          "encoding": "no-op",
+          "host": [
+            "invoices.service.consul"
+          ],
+          "disable_host_sanitize": true
+        }
+      ]
     }
   ]
 }
