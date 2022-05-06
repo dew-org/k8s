@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: deworg-customers
-          image: deworg/customers:0.0.1
+          image: deworg/customers:0.0.2
           env:
             - name: CONSUL_HOST
               value: "consul-server.consul"
