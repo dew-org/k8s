@@ -8,6 +8,9 @@
   "endpoints": [
     {
       "endpoint": "/customers",
+      "input_headers": [
+        "*"
+      ],
       "method": "POST",
       "backend": [
         {
@@ -23,6 +26,9 @@
     },
     {
       "endpoint": "/customers/{id}",
+      "input_headers": [
+        "*"
+      ],
       "method": "GET",
       "backend": [
         {
@@ -38,6 +44,9 @@
     },
     {
       "endpoint": "/catalogue",
+      "input_headers": [
+        "*"
+      ],
       "method": "POST",
       "backend": [
         {
@@ -53,6 +62,9 @@
     },
     {
       "endpoint": "/catalogue",
+      "input_headers": [
+        "*"
+      ],
       "method": "GET",
       "backend": [
         {
@@ -68,6 +80,9 @@
     },
     {
       "endpoint": "/catalogue/{codeOrSku}",
+      "input_headers": [
+        "*"
+      ],
       "method": "GET",
       "backend": [
         {
@@ -83,6 +98,9 @@
     },
     {
       "endpoint": "/inventory",
+      "input_headers": [
+        "*"
+      ],
       "method": "POST",
       "backend": [
         {
@@ -98,6 +116,9 @@
     },
     {
       "endpoint": "/inventory/{codeOrSku}",
+      "input_headers": [
+        "*"
+      ],
       "method": "GET",
       "backend": [
         {
@@ -113,6 +134,9 @@
     },
     {
       "endpoint": "/invoices",
+      "input_headers": [
+        "*"
+      ],
       "method": "POST",
       "backend": [
         {
@@ -128,6 +152,9 @@
     },
     {
       "endpoint": "/invoices/{id}",
+      "input_headers": [
+        "*"
+      ],
       "method": "GET",
       "backend": [
         {
@@ -143,6 +170,9 @@
     },
     {
       "endpoint": "/invoices",
+      "input_headers": [
+        "*"
+      ],
       "method": "GET",
       "backend": [
         {
