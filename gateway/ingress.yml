@@ -5,14 +5,19 @@ metadata:
   labels:
     name: dew-org-ingress
 spec:
+  defaultBackend:
+    service:
+      name: deworg-gateway
+      port:
+        number: 80
   rules:
-  - host: api.deworg.com
-    http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: deworg-gateway
-            port: 
-              number: 80
+    - host: api.deworg.com
+      http:
+        paths:
+          - path: /*
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: deworg-gateway
+                port:
+                  number: 80
