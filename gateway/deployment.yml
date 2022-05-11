@@ -28,11 +28,7 @@ spec:
     spec:
       containers:
         - name: deworg-gateway
-          image: deworg/gateway:0.0.1
-          resources:
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
+          image: deworg/gateway:0.1.0
           ports:
             - containerPort: 8080
           command:

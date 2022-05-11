@@ -31,14 +31,10 @@ spec:
     spec:
       containers:
         - name: deworg-inventory
-          image: deworg/inventory:0.0.2
+          image: deworg/inventory:0.1.1
           env:
             - name: CONSUL_HOST
               value: "consul-server.consul"
-            - name: MONGO_HOST
-              value: deworg-db
-            - name: KAFKA_HOST
-              value: kafka.kafka
             - name: AUTH0_AUDIENCE
               valueFrom:
                 configMapKeyRef:
@@ -49,9 +45,5 @@ spec:
                 configMapKeyRef:
                   name: auth0
                   key: domain
-          resources:
-            limits:
-              memory: "256Mi"
-              cpu: "500m"
           ports:
             - containerPort: 8080
