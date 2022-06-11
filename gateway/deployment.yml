@@ -18,6 +18,7 @@ metadata:
   annotations:
     "consul.hashicorp.com/connect-inject": "true"
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: deworg-gateway
