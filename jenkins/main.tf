@@ -71,10 +71,13 @@ module "jenkins-gke" {
   node_metadata            = "GKE_METADATA_SERVER"
   node_pools               = [
     {
-      name         = "butler-pool"
-      min_count    = 1
-      max_count    = 3
-      auto_upgrade = true
+      name           = "default-pool"
+      machine_type   = "e2-standard-2"
+      node_locations = var.zones
+      min_count      = 1
+      max_count      = 3
+      image_type     = "COS_CONTAINERD"
+      auto_upgrade   = true
     }
   ]
 }
