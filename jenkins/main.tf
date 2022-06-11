@@ -55,8 +55,7 @@ module "jenkins-vpc" {
   Jenkins GKE
  *****************************************/
 module "jenkins-gke" {
-  source                   = "terraform-google-modules/kubernetes-engine/google//modules/beta-public-cluster/"
-  version                  = "~> 15.0"
+  source                   = "terraform-google-modules/kubernetes-engine/google//modules/beta-public-cluster"
   project_id               = module.enables-google-apis.project_id
   name                     = "jenkins"
   regional                 = false
@@ -75,8 +74,9 @@ module "jenkins-gke" {
   node_pools               = [
     {
       name         = "butler-pool"
-      min_count    = 3
-      max_count    = 6
+      machine_type = "n1-standard-2"
+      min_count    = 1
+      max_count    = 3
       auto_upgrade = true
     }
   ]
