@@ -9,12 +9,12 @@ variable "tfstate_gcs_backend" {
 
 variable "region" {
   description = "The region to deploy Jenkins on GKE"
-  default     = "us-east4"
+  default     = "us-central1"
 }
 
 variable "zones" {
   description = "The zones to deploy Jenkins on GKE"
-  default     = ["us-east4-a"]
+  default     = ["us-central1-c"]
 }
 
 variable "ip_range_pods_name" {
