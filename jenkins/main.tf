@@ -2,7 +2,7 @@
   Activate Services in Jenkins Project
  *****************************************/
 module "enables-google-apis" {
-  source  = "terraform-google-modules/project-factory/google//modules/project_services"
+  source = "terraform-google-modules/project-factory/google//modules/project_services"
 
   project_id = var.project_id
 
@@ -22,7 +22,7 @@ module "enables-google-apis" {
   Jenkins VPC
  *****************************************/
 module "jenkins-vpc" {
-  source  = "terraform-google-modules/network/google"
+  source = "terraform-google-modules/network/google"
 
   project_id   = module.enables-google-apis.project_id
   network_name = var.network_name
