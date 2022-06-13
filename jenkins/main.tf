@@ -165,10 +165,10 @@ data "local_file" "helm_chart_values" {
 }
 
 resource "helm_release" "jenkins" {
-  name       = "jenkins"
-  repository = "https://charts.helm.sh/stable"
+  name       = "jenkinsci"
+  repository = "https://charts.jenkins.io"
   chart      = "jenkins"
-  version    = "1.9.18"
+  version    = "4.1.8"
   timeout    = 1200
 
   values = [data.local_file.helm_chart_values.content]
