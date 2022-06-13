@@ -71,14 +71,13 @@ module "dew-gke" {
   node_metadata            = "GKE_METADATA_SERVER"
   node_pools               = [
     {
-      name           = "default-pool"
-      machine_type   = "e2-micro"
-      node_locations = var.zones
-      min_count      = 1
-      max_count      = 3
-      image_type     = "COS_CONTAINERD"
-      disk_size_gb   = 10
-      auto_upgrade   = true
+      name         = "default-pool"
+      machine_type = "e2-micro"
+      min_count    = 1
+      max_count    = 3
+      image_type   = "COS_CONTAINERD"
+      disk_size_gb = 10
+      auto_upgrade = true
     }
   ]
 }
