@@ -1,5 +1,4 @@
-master:
-  tag: "2.300"
+controller:
   containerEnv:
     - name: PROJECT_ID
       valueFrom:
