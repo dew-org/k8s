@@ -50,7 +50,7 @@ controller:
     - kubernetes-credentials:0.9.0
     - favorite:2.4.1
     - blueocean-i18n:1.25.5
-    - workflow-support:3.8
+    - workflow-support:820.vd1a_6cc65ef33
     - github:1.34.3
     - configuration-as-code:1.55.1
     - display-url-api:2.3.6
