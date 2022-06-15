@@ -163,9 +163,9 @@ controller:
                               command: ""
                               args: ""
                               resourceRequestCpu: "500m"
-                              resourceLimitCpu: "1000m"
-                              resourceRequestMemory: "2Gi"
-                              resourceLimitMemory: "4Gi"
+                              resourceLimitCpu: "500m"
+                              resourceRequestMemory: "1Gi"
+                              resourceLimitMemory: "1Gi"
                           volumes:
                             - emptyDirVolume:
                                 memory: false
