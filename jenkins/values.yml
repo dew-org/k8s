@@ -31,21 +31,21 @@ controller:
     - blueocean-dashboard:1.25.5
     - checks-api:1.7.4
     - pipeline-stage-view:2.24
-    - ssh-credentials:1.19
+    - ssh-credentials:277.v95c2fec1c047
     - popper2-api:2.11.5-2
-    - structs:1.24
+    - structs:318.va_f3ccb_729b_71
     - blueocean-core-js:1.25.5
     - momentjs:1.1.1
     - blueocean-personalization:1.25.5
-    - sshd:3.1.0
+    - sshd:3.237.v883d165a_c1d3
     - git-client:3.11.0
-    - workflow-durable-task-step:2.40
+    - workflow-durable-task-step:1146.v1a_d2e603f929
     - workflow-cps-global-lib-http:2.0.0
     - popper-api:1.16.1-3
-    - workflow-basic-steps:2.24
-    - pipeline-graph-analysis:1.12
+    - workflow-basic-steps:948.v2c72a_091b_b_68
+    - pipeline-graph-analysis:195.v5812d95a_a_2f9
     - blueocean-pipeline-editor:1.25.5
-    - workflow-aggregator:2.7
+    - workflow-aggregator:581.v0c46fa_697ffd
     - plain-credentials:1.8
     - kubernetes-credentials:0.9.0
     - favorite:2.4.1
