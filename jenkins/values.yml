@@ -52,13 +52,13 @@ controller:
     - blueocean-i18n:1.25.5
     - workflow-support:820.vd1a_6cc65ef33
     - github:1.34.3
-    - configuration-as-code:1.55.1
+    - configuration-as-code:1429.v09b_044a_c93de
     - display-url-api:2.3.6
     - blueocean-config:1.25.5
     - jenkins-design-language:1.25.5
     - bootstrap4-api:4.6.0-5
     - bouncycastle-api:2.26
-    - durable-task:1.39
+    - durable-task:496.va67c6f9eefa7
     - blueocean-git-pipeline:1.25.5
     - font-awesome-api:6.1.1-1
     - caffeine-api:2.9.3-65.v6a_47d0f4d1fe
@@ -126,8 +126,8 @@ controller:
     - blueocean-web:1.25.5
     - workflow-step-api:625.vd896b_f445a_f8
     - sse-gateway:1.25
-    - credentials:credentials:1129.vef26f5df883c
-    - okhttp-api:okhttp-api:4.9.3-105.vb96869f8ac3a
+    - credentials:1129.vef26f5df883c
+    - okhttp-api:4.9.3-105.vb96869f8ac3a
     - snakeyaml-api:1.30.1
     - blueocean-rest-impl:1.25.5
     - metrics:4.1.6.2
