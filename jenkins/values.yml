@@ -126,7 +126,7 @@ controller:
     - blueocean-web:1.25.5
     - workflow-step-api:625.vd896b_f445a_f8
     - sse-gateway:1.25
-    - credentials:1126.ve05618c41e62
+    - credentials:1061.vb_1fceb_58fa_18
     - okhttp-api:4.9.3-105.vb96869f8ac3a
     - snakeyaml-api:1.30.1
     - blueocean-rest-impl:1.25.5
