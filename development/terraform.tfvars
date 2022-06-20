@@ -1,5 +1,4 @@
 project_id             = "PROJECT_ID"
-tfstate_gcs_backend    = "PROJECT_ID-tfstate"
 region                 = "us-east4"
 zones                  = ["us-east4-a"]
 ip_range_pods_name     = "ip-range-pods"

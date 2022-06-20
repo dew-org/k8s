@@ -2,11 +2,6 @@ variable "project_id" {
   description = "The project id to deploy all services on GKE"
 }
 
-variable "tfstate_gcs_backend" {
-  description = "Name of the GCS bucket to use as a backend for Terraform State"
-  default     = "TFSTATE_GCS_BACKEND"
-}
-
 variable "region" {
   description = "The region to deploy all services on GKE"
   default     = "us-central1"
@@ -40,16 +35,4 @@ variable "subnet_ip" {
 variable "subnet_name" {
   description = "The name of the subnet to use for Dew"
   default     = "dew-subnet"
-}
-
-variable "github_username" {
-  description = "Github user/organization name where the terraform repo resides."
-}
-
-variable "github_token" {
-  description = "Github token for the user/organization."
-}
-
-variable "github_repo" {
-  description = "Github repo name."
 }

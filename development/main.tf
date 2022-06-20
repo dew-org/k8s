@@ -82,17 +82,3 @@ module "dew-gke" {
   ]
 }
 
-/*****************************************
-  K8S secrets for GH
- *****************************************/
-resource "kubernetes_secret" "gh-secrets" {
-  metadata {
-    name = "github-secrets"
-  }
-  data = {
-    github_username = var.github_username
-    github_repo     = var.github_repo
-    github_token    = var.github_token
-  }
-}
-
