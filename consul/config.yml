@@ -2,7 +2,7 @@ global:
   name: consul
   datacenter: dc1
 server:
-  replicas: 1
+  replicas: 2
   securityContext:
     runAsNonRoot: false
     runAsGroup: 0
