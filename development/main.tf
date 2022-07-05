@@ -72,11 +72,11 @@ module "dew-gke" {
   node_pools               = [
     {
       name         = "default-pool"
-      machine_type = "e2-micro"
+      machine_type = "n2-standard-2"
       min_count    = 1
-      max_count    = 3
+      max_count    = 2
       image_type   = "COS_CONTAINERD"
-      disk_size_gb = 10
+      disk_size_gb = 100
       auto_upgrade = true
     }
   ]
