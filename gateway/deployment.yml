@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: deworg-gateway
-          image: deworg/gateway:0.1.0
+          image: deworg/gateway:0.1.1
           ports:
             - containerPort: 8080
           command:
