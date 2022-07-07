@@ -29,6 +29,9 @@
       "input_headers": [
         "*"
       ],
+      "input_query_strings":[
+        "*"
+      ],
       "method": "GET",
       "backend": [
         {
@@ -65,6 +68,9 @@
       "input_headers": [
         "*"
       ],
+      "input_query_strings": [
+        "*"
+      ],
       "method": "GET",
       "backend": [
         {
@@ -81,6 +87,9 @@
     {
       "endpoint": "/catalogue/{codeOrSku}",
       "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [
         "*"
       ],
       "method": "GET",
@@ -119,6 +128,9 @@
       "input_headers": [
         "*"
       ],
+      "input_query_strings": [
+        "*"
+      ],
       "method": "GET",
       "backend": [
         {
@@ -155,6 +167,9 @@
       "input_headers": [
         "*"
       ],
+      "input_query_strings": [
+        "*"
+      ],
       "method": "GET",
       "backend": [
         {
@@ -171,6 +186,9 @@
     {
       "endpoint": "/invoices",
       "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [
         "*"
       ],
       "method": "GET",
